@@ -43,7 +43,7 @@
         }
       },
      mounted () {
-          let uri = 'http://learnapp.local/api/teams/players/'+this.$route.params.id;
+          let uri = '/api/teams/players/'+this.$route.params.id;
     axios
       .get(uri)
       .then(response => (this.posts = response.data))
