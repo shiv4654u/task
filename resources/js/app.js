@@ -21,6 +21,8 @@ import HomeComponent from './components/HomeComponent.vue';
 import PlayersComponent from './components/PlayersComponent.vue';
 import MatchesComponent from './components/MatchesComponent.vue';
 import PointsComponent from './components/PointsComponent.vue';
+import CreateTeamComponent from './components/CreateTeamComponent.vue';
+import EditTeamComponent from './components/EditTeamComponent.vue';
 
 const routes = [
   {
@@ -42,6 +44,16 @@ const routes = [
     name: 'points',
     path: '/points',
     component: PointsComponent
+  },
+  {
+    name: 'create',
+    path: '/create',
+    component: CreateTeamComponent
+  },
+  {
+    name: 'edit',
+    path: '/edit/:id',
+    component: EditTeamComponent
   },
 ];
 
