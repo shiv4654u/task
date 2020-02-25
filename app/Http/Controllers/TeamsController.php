@@ -48,4 +48,41 @@ class TeamsController extends Controller
             ->get();
             return response()->json($points);
     }
+
+    public function store(Request $request)
+    {
+        $post = new Teams([
+        'name' => $request->get('name'),
+        'logoUri' => $request->get('logoUri')
+      ]);
+
+      $post->save();
+
+      return response()->json('success');
+    }
+
+    public function edit($id)
+    {
+        $team = Teams::find($id);
+      return response()->json($team);
+    }
+
+    public function update(Request $request, $id)
+    {
+        
+      $team = Teams::find($id);
+
+      $team->update($request->all());
+
+      return response()->json('successfully updated');
+    }
+
+    public function delete($id)
+    {
+      $team = Teams::find($id);
+
+      $team->delete();
+
+      return response()->json('successfully deleted');
+    }
 }
