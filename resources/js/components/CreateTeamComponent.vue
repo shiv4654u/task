@@ -1,4 +1,3 @@
-// CreatePost.vue
 
 <template>
   <div>
